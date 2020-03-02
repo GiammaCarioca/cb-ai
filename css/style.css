@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+@font-face {
+	font-family: 'Bluu Next';
+	src: url(../assets/fonts/bluunext.woff2), url(../assets/fonts/bluunext.woff);
+}
+
+:root {
+	--green: #5f8b64;
+	--pink: #ffc0cb;
+	--purple: #67419e;
+	--maroon: #6c3052;
+	--black: #000;
+	--white: #fff;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', -apple-system, 'Helvetica Neue', Helvetica, Arial,
+		sans-serif;
+	min-height: 100vh;
+	margin: 40px auto;
+	max-width: 940px;
+	line-height: 1.15;
+	background-color: var(--green);
+	background-image: linear-gradient(
+		180deg,
+		var(--white),
+		rgba(255, 255, 255, 0)
+	);
+}
+
+h1 {
+	font-family: 'Bluu Next', 'Times New Roman', serif;
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin: 0.67em 0;
+}
+
+p {
+	line-height: 1.6;
+	margin-bottom: 1em;
+}
+
+a {
+	color: var(--purple);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* HOME */
+body.home {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+.header.home {
+	text-align: center;
+	padding-top: 40px;
+}
+
+.avatar {
+	width: 5rem;
+	height: 5rem;
+	border: 2px solid rgba(255, 255, 255, 0);
+	border-radius: 100%;
+	max-width: 100%;
+	padding: 0.25rem;
+}
+
+.avatar:hover {
+	border: 2px solid var(--purple);
+}
+
+.socials a {
+	text-decoration: none;
+	padding: 0.25rem;
+}
+
+img.social {
+	border-style: none;
+	height: 2rem;
+	max-width: 100%;
+	width: 2rem;
+}
+
+img.social:hover {
+	filter: invert(30%) sepia(50%) saturate(886%) hue-rotate(225deg)
+		brightness(90%) contrast(93%);
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 40px;
+}
+
+nav a {
+	display: inline-block;
+	width: 220px;
+	text-align: center;
+	position: relative;
+	font-family: 'Bluu Next', 'Times New Roman', serif;
+	text-decoration: none;
+	font-size: 24px;
+	color: var(--purple);
+}
+
+nav a:hover::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background-color: var(--pink);
+	border-radius: 70%;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: -30px;
+	transform: translateX(-10px);
+}
+
+@media (max-width: 660px) {
+	nav {
+		flex-direction: column;
+	}
+
+	nav a {
+		margin-top: 12px;
+	}
+
+	nav a:hover::before {
+		display: none;
+	}
+}
+
+/* COVER LETTER */
+body.cover {
+	padding: 0 20px;
+	background-color: var(--pink);
+	background-image: linear-gradient(
+		180deg,
+		var(--white),
+		rgba(255, 255, 255, 0)
+	);
+}
+
+.cover a {
+	color: var(--green);
+}
+
+/* ACADEMY */
+body.academy {
+	background-image: linear-gradient(
+		90deg,
+		var(--white),
+		rgba(255, 255, 255, 0)
+	);
+}
+
+.academy h1 {
+	margin-bottom: 6px;
+}
+
+.header.academy {
+	padding: 0 20px;
+}
+
+.academy p {
+	margin: 0 0 40px 0;
+}
+
+.academy a {
+	font-family: 'Bluu Next', 'Times New Roman', serif;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.4;
+	position: relative;
+}
+
+.academy li {
+	list-style: none;
+	margin-left: 40px;
+}
+
+.academy li:hover::after {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background-color: var(--pink);
+	border-radius: 70%;
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	vertical-align: middle;
+	top: -4px;
+	left: 5px;
+}
+
+/* ABOUT */
+body.about {
+	font-family: 'Bluu Next', 'Times New Roman', serif;
+	font-size: 24px;
+	line-height: 1.25;
+	background-color: var(--maroon);
+	background-image: linear-gradient(
+		180deg,
+		var(--white),
+		rgba(255, 255, 255, 0)
+	);
+	height: 100vh;
+	transition: background-color 0.5s;
+}
+
+.about h1 {
+	font-size: 24px;
+	margin: 10px 0;
+}
+
+.about h2 {
+	font-size: 10vmin;
+	color: inherit;
+}
+
+section.about {
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	text-align: center;
+}
+
+section.about .circle {
+	width: 20px;
+	height: 20px;
+	background-color: var(--green);
+	border-radius: 70%;
+	display: inline-block;
+	transition: background-color 0.5s;
+}
+
+.footer.about {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer.about img {
+	margin: 0 10px;
+	cursor: pointer;
+}

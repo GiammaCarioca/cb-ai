@@ -210,6 +210,14 @@ img {
   :root {
     --offset: 0;
   }
+  img {
+    max-width: 100%;
+    width: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
   .grid li:nth-child(1):hover ~ li:last-child:after {
     background: #5f8b64;
   }
@@ -239,8 +247,8 @@ img {
   left: 2rem;
   text-align: center;
   top: 50%;
-  width: 160px;
-  margin: auto;
+  width: 100px;
+  margin: 0 auto;
   color: white;
   z-index: 100;
   opacity: 0;

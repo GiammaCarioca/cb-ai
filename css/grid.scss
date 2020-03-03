@@ -148,6 +148,13 @@ img {
 		--offset: 0;
 	}
 
+	img {
+		max-width: 100%;
+		width: 100%;
+		object-fit: fill;
+		filter: grayscale(100%);
+	}
+
 	.grid {
 		//colors (optional)
 		@include colors(6, [#5f8b64, #67419e, #67419e, #5f8b64, #5f8b64, #67419e ]);
@@ -163,8 +170,8 @@ img {
 	left: 2rem;
 	text-align: center;
 	top: 50%;
-	width: 160px;
-	margin: auto;
+	width: 100px;
+	margin: 0 auto;
 	color: white;
 	z-index: 100;
 	opacity: 0;

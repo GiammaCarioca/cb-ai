@@ -6,8 +6,8 @@
 }
 
 :root {
-	--green: #5f8b64;
-	--pink: #ffc0cb;
+	--green: #064234;
+	--pink: #f3ceee;
 	--purple: #67419e;
 	--maroon: #6c3052;
 	--black: #000;
@@ -29,7 +29,7 @@ body {
 	margin: 40px auto;
 	max-width: 940px;
 	line-height: 1.15;
-	background-color: var(--green);
+	background-color: var(--pink);
 	background-image: linear-gradient(
 		180deg,
 		var(--white),
@@ -50,9 +50,25 @@ p {
 }
 
 a {
-	color: var(--purple);
+	color: var(--green);
 	font-weight: bold;
 	text-decoration: none;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer img {
+	margin: 0 10px;
+	cursor: pointer;
 }
 
 /* HOME */
@@ -102,7 +118,7 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 }
 
 nav a {
@@ -113,14 +129,14 @@ nav a {
 	font-family: 'Bluu Next', 'Times New Roman', serif;
 	text-decoration: none;
 	font-size: 24px;
-	color: var(--purple);
+	color: var(--green);
 }
 
 nav a:hover::before {
 	content: '';
 	width: 20px;
 	height: 20px;
-	background-color: var(--pink);
+	background-color: var(--green);
 	border-radius: 70%;
 	display: inline-block;
 	position: absolute;
@@ -145,7 +161,7 @@ nav a:hover::before {
 
 /* COVER LETTER */
 body.cover {
-	padding: 0 20px;
+	padding: 0 20px 60px;
 	background-color: var(--pink);
 	background-image: linear-gradient(
 		180deg,
@@ -156,6 +172,18 @@ body.cover {
 
 .cover a {
 	color: var(--green);
+}
+
+.footer.cover {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (max-width: 1075px) {
+	.footer.cover {
+		background-color: var(--green);
+		padding: 20px;
+	}
 }
 
 /* ACADEMY */
@@ -196,7 +224,7 @@ body.academy {
 	content: '';
 	width: 20px;
 	height: 20px;
-	background-color: var(--pink);
+	background-color: var(--maroon);
 	border-radius: 70%;
 	display: inline-block;
 	justify-content: center;
@@ -248,20 +276,4 @@ section.about .circle {
 	border-radius: 70%;
 	display: inline-block;
 	transition: background-color 0.5s;
-}
-
-.footer.about {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	padding: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.footer.about img {
-	margin: 0 10px;
-	cursor: pointer;
 }

@@ -174,11 +174,12 @@ nav a::before {
 	top: -30px;
 	transform: translateX(-10px);
 	opacity: 0;
+	transition: opacity 0.4s ease-out;
 }
 
 nav a:hover::before {
 	opacity: 1;
-	transition: opacity 0.5s;
+	transition: opacity 0.4s ease-in;
 }
 
 @media (max-width: 660px) {
@@ -213,17 +214,16 @@ body.cover {
 .footer.cover {
 	display: flex;
 	justify-content: space-between;
+	background-color: var(--green);
+	padding: 10px;
 }
 
-@media (max-width: 1075px) {
-	.footer.cover {
-		background-color: var(--green);
-		padding: 20px;
-	}
+.footer.cover a {
+	color: var(--pink);
+}
 
-	path {
-		fill: #f3ceee;
-	}
+path {
+	fill: var(--pink);
 }
 
 /* ACADEMY */
@@ -278,7 +278,6 @@ body.academy {
 
 .academy li:hover::after {
 	opacity: 1;
-	transition: opacity 0.5s;
 }
 
 /* ABOUT */

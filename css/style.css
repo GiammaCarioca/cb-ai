@@ -1,8 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@font-face {
+	font-family: Inter;
+	src: url(../assets/fonts/inter-var.woff2);
+}
 
 @font-face {
 	font-family: 'Bluu Next';
 	src: url(../assets/fonts/bluunext.woff2), url(../assets/fonts/bluunext.woff);
+}
+
+@keyframes animate-type {
+	0% {
+		font-variation-settings: 'wght' 400, 'slnt' 0;
+		letter-spacing: 0em;
+	}
+	100% {
+		font-variation-settings: 'wght' 900, 'slnt' -10;
+		letter-spacing: 0.1em;
+	}
 }
 
 :root {
@@ -12,6 +26,9 @@
 	--maroon: #6c3052;
 	--black: #000;
 	--white: #fff;
+	--font-stack-serif: 'Bluu Next', 'Times New Roman', serif;
+	--font-stack-sans-serif: Inter, 'Roboto', -apple-system, 'Helvetica Neue',
+		Helvetica, Arial, sans-serif;
 }
 
 *,
@@ -23,8 +40,7 @@
 }
 
 body {
-	font-family: 'Roboto', -apple-system, 'Helvetica Neue', Helvetica, Arial,
-		sans-serif;
+	font-family: var(--font-stack-sans-serif);
 	min-height: 100vh;
 	margin: 40px auto;
 	max-width: 940px;
@@ -38,10 +54,16 @@ body {
 }
 
 h1 {
-	font-family: 'Bluu Next', 'Times New Roman', serif;
+	font-family: var(--font-stack-sans-serif);
 	font-size: 1.25rem;
 	font-weight: 600;
 	margin: 0.67em 0;
+}
+
+h1.animated-title {
+	font-family: Inter;
+	font-variation-settings: 'wght' 400;
+	animation: animate-type 3s infinite alternate;
 }
 
 p {
@@ -126,7 +148,7 @@ nav a {
 	width: 220px;
 	text-align: center;
 	position: relative;
-	font-family: 'Bluu Next', 'Times New Roman', serif;
+	font-family: var(--font-stack-sans-serif);
 	text-decoration: none;
 	font-size: 24px;
 	color: var(--green);
@@ -208,7 +230,7 @@ body.academy {
 }
 
 .academy a {
-	font-family: 'Bluu Next', 'Times New Roman', serif;
+	font-family: var(--font-stack-sans-serif);
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 1.4;
@@ -237,7 +259,7 @@ body.academy {
 
 /* ABOUT */
 body.about {
-	font-family: 'Bluu Next', 'Times New Roman', serif;
+	font-family: var(--font-stack-serif);
 	font-size: 24px;
 	line-height: 1.25;
 	background-color: var(--maroon);
@@ -251,6 +273,7 @@ body.about {
 }
 
 .about h1 {
+	font-family: var(--font-stack-serif);
 	font-size: 24px;
 	margin: 10px 0;
 }

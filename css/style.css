@@ -67,13 +67,18 @@ h1.animated-title {
 	animation: animate-type 3s infinite alternate;
 }
 
-/* @media (max-width: 1075px) {
+@media (max-width: 1075px) {
 	h1.animated-title {
-		font-family: var(--font-stack-serif);
+		font-size: 18px;
+		/* font-family: var(--font-stack-serif);
 		font-variation-settings: none;
-		animation: none;
+		animation: none; */
 	}
-} */
+
+	span {
+		font-size: 0.6em;
+	}
+}
 
 p {
 	line-height: 1.6;

@@ -55,24 +55,25 @@ body {
 
 h1 {
 	font-family: var(--font-stack-sans-serif);
-	font-size: 36px;
-	font-weight: 400;
+	font-size: 1.25rem;
+	font-weight: 600;
 	margin: 0.67em 0;
 }
 
 h1.animated-title {
 	font-family: Inter;
+	font-size: 36px;
 	font-variation-settings: 'wght' 400;
 	animation: animate-type 3s infinite alternate;
 }
 
-@media (max-width: 1075px) {
+/* @media (max-width: 1075px) {
 	h1.animated-title {
 		font-family: var(--font-stack-serif);
 		font-variation-settings: none;
 		animation: none;
 	}
-}
+} */
 
 p {
 	line-height: 1.6;

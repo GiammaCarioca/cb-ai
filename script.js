@@ -24,7 +24,7 @@ const pages = [
 		circle: '#67419e'
 	},
 	{
-		copy: `tá deixando o cabelo crespo crescer pela primeira vez!`,
+		copy: `tá deixando o cabelo crespo crescer!`,
 		background: '#67419e',
 		circle: '#6c3052'
 	}
